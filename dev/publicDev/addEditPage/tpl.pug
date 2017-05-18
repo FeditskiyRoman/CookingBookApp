@@ -1,0 +1,26 @@
+.recepie-page-container
+  p.title {{vm.title}}
+
+  .content
+    md-input-container.name
+      label enter recepie name
+      input(
+        type="text"
+        required=""
+        ng-model='vm.recepie.name')
+
+    md-input-container
+      label Category
+      md-select(ng-model="vm.recepie.category")
+        md-option(ng-repeat='category in vm.categories'
+          value='{{category}}')
+          | {{category}}
+
+    md-input-container.description
+      label enter recepie description
+      textarea(
+        ng-model='vm.recepie.description'
+        mdMaxlength="300")
+    .button-container
+      md-button(ng-click="vm.save()") save
+      md-button(ng-click="vm.back()") back

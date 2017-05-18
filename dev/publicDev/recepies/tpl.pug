@@ -1,0 +1,21 @@
+.recepies-list-page
+  p.title Coocking Book
+
+  .content
+    md-list
+      md-list-item(
+        ng-repeat="item in vm.recepies"
+        ng-click="vm.openRecepie(item.id)")
+        div
+          p.name name: {{ item.name }}
+          p.category category: {{ item.category }}
+          p.date updated: {{ item.date }}
+
+        md-button.md-secondary.md-fab.md-mini.md-primary(
+          aria-label="delete"
+          ng-click="vm.onDelete()")
+          i.material-icons delete
+
+.add-button-container
+  md-button.md-fab.md-primary(ng-click="vm.onAdd()")
+    i.material-icons add
