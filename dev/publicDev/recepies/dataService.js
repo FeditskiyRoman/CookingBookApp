@@ -23,7 +23,7 @@
     };
 
     this.update = function (data) {
-      return $http.update('/api/recipe', data);
+      return $http.put('/api/recipe', data);
     };
   }
 })(angular);

@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/FeditskiyRoman/CookingBookApp"
   },
-  "author": "",
+  "author": "FeditskiyRoman",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/FeditskiyRoman/CookingBookApp/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/FeditskiyRoman/CookingBookApp#readme",
   "dependencies": {
     "boom": "^4.2.0",
     "bower": "^1.7.9",

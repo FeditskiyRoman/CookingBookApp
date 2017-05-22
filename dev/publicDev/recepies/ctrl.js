@@ -26,24 +26,7 @@
       cancel: 'Cancel'
     });
 
-    vm.recepies = [
-      {
-        name: 'recepies name',
-        date: new Date().getHours() + ' : ' + new Date().getMinutes() +
-          ' : ' + new Date().getSeconds(),
-        category: 'category'
-      },
-      {
-        name: 'recepies name',
-        date: new Date().toDateString(),
-        category: 'category'
-      },
-      {
-        name: 'recepies name',
-        date: new Date().toDateString(),
-        category: 'category'
-      }
-    ];
+    vm.recepies = [];
 
     vm.openRecepie = function(id) {
       $location.path('/recepie/' + id);

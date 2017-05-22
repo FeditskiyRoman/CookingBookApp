@@ -7,8 +7,8 @@ module.exports = (connection) => {
           let request = [
             'INSERT INTO ',
             '`recipes` (`id`, `name`, `description`, `category`, `date`) ',
-            'VALUES (NULL, "' + data.name + data.description +
-              '", "' + data.category + '", "' + '", NOW());'
+            'VALUES (NULL, "' + data.name + '", "' + data.description +
+              '", "' + data.category + '", NOW());'
           ].join('');
 
         connection.query(request, (err, response) => {
@@ -60,10 +60,10 @@ module.exports = (connection) => {
       return new Promise((resolve, reject) => {
         let request = [
           'UPDATE recipes ',
-          'SET name="' + data.name + '" ',
+          'SET name="' + data.name + '", ',
           'description="' + data.description + '", ',
           'category="' + data.category + '", ',
-          'date=NOW(), ',
+          'date=NOW() ',
           'WHERE id="' + data.id + '";'
         ].join('');
 

@@ -30,6 +30,9 @@
 
       getRecepie($routeParams.id);
       vm.save = function() {
+        vm.recepie.description = vm.recepie.description || '';
+        vm.recepie.category = vm.recepie.category || '';
+
         recepiesService.update(vm.recepie).then(function(res) {
           $location.path('/recepies');
           showToast();
@@ -39,6 +42,9 @@
       vm.title = 'Add your recepie';
 
       vm.save = function() {
+        vm.recepie.description = vm.recepie.description || '';
+        vm.recepie.category = vm.recepie.category || '';
+
         recepiesService.add(vm.recepie).then(function(res) {
           $location.path('/recepies');
           showToast();

@@ -13,7 +13,7 @@
     $routeProvider,
     $httpProvider
   ) {
-    $httpProvider.interceptors.push('Interseptor');
+    $httpProvider.interceptors.push('Interceptor');
 
     $routeProvider.when('/recepies', {
       controller: 'recepiesCtrl',
